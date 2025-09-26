@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"blackjack/internal/data"
+	"fmt"
+)
 
 func main() {
-	style := CardStyle.Foreground(SpadeColor)
-	fmt.Println(style.Render(fmt.Sprintf("%s\n%s\n%s", "5  ", " "+SpadeSymbol+" ", "  5")))
+	style := data.CardStyle.Foreground(data.SpadeColor)
+	fmt.Println(style.Render(fmt.Sprintf("%s\n%s\n%s", "5  ", " "+data.SuitString[data.Spades]+" ", "  5")))
 }
